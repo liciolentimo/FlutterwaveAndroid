@@ -15,9 +15,6 @@ import com.flutterwave.raveandroid.RavePayManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    String country = "Kenya";
-    String currency = "KSH";
-    String phone = "254705304841";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void makePayment() {
         new RavePayManager(this)
-                .setAmount(Double.parseDouble("1000"))
-                .setEmail("lentimo@gmail.com")
+                .setAmount(Double.parseDouble("500"))
+                .setEmail("test@gmail.com")
                 .setCountry("KE")
                 .setCurrency("KES")
                 .setfName("Licio")
                 .setlName("Lentimo")
                 .setNarration("Purchase Goods")
-                .setPublicKey("FLWPUBK_TEST-6a339609d7ef2284217947623e977d0d-X")
-                .setEncryptionKey("FLWSECK_TESTd93cb2b637bf")
+                .setPublicKey("your-public-key")
+                .setEncryptionKey("your-encryption-key")
                 .setTxRef(System.currentTimeMillis() + "Ref")
                 .acceptAccountPayments(true)
                 .acceptCardPayments(true)
